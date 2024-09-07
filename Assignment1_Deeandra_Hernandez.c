@@ -22,7 +22,7 @@ double calculateArea();
 double calculateWidth();
 double calculateHeight();
 double askForUserInput();*/
-int Point1_input(double Px1, double Py1);
+double Point1_input(double Px1, double Py1);
 //void Point2_input(double Px2, double Py2);
 //void Printme();
 
@@ -74,7 +74,7 @@ int main(int argc, char**argv)
 
 }*/
 
-int Point1_input(double Px1, double Py1)
+double Point1_input(double Px1, double Py1)
 {
      printf("Point #1 entered:\n");
     printf("x1 = ");
@@ -83,7 +83,7 @@ int Point1_input(double Px1, double Py1)
     printf("y1 = ");
      scanf("%lf", &Py1);
 
-     return 0;
+     return Px1, Py1;
 
 }
 
