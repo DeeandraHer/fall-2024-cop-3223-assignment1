@@ -74,7 +74,7 @@ int main(int argc, char**argv)
 
 }*/
 
-void Point1_input(double Px1, double Py1)
+int Point1_input(double Px1, double Py1)
 {
      printf("Point #1 entered:\n");
     printf("x1 = ");
@@ -82,6 +82,8 @@ void Point1_input(double Px1, double Py1)
 
     printf("y1 = ");
      scanf("%lf\n", &Py1);
+
+     return 0;
 
 }
 
