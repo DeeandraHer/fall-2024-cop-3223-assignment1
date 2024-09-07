@@ -78,10 +78,10 @@ int Point1_input(double Px1, double Py1)
 {
      printf("Point #1 entered:\n");
     printf("x1 = ");
-     scanf("%lf\n", &Px1); //storing variable
+     scanf("%lf", &Px1); //storing variable
 
     printf("y1 = ");
-     scanf("%lf\n", &Py1);
+     scanf("%lf", &Py1);
 
      return 0;
 
