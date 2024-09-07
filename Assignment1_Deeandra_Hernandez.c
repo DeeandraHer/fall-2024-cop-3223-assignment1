@@ -24,7 +24,7 @@ double calculateWidth();
 //double askForUserInput();
 void Points_input(double *x1, double *y1, double *x2, double *y2);
 //void Point2_input(double Px2, double Py2);
-void Pointsprint(double *x1, double *y1, double *x2, double *y2);
+//void Pointsprint(double *x1, double *y1, double *x2, double *y2);
 
 // main function
 int main(int argc, char**argv)
@@ -36,7 +36,7 @@ int main(int argc, char**argv)
 
  //askForUserInput();
   Points_input(&x1, &y1, &x2, &y2); //might have to delete 
-  Pointsprint(&x1, &y1, &x2, &y2);
+  //Pointsprint(&x1, &y1, &x2, &y2);
   calculateWidth();
   //calculateHeight();
   //calculatePerimeter();
@@ -81,8 +81,8 @@ void Points_input(double *x1, double *y1, double *x2, double *y2)
     /*this will take user input and store it in each corresponding 
     user fuction usind pointers to facilitate.*/
 
-    printf("Hello welcome to my Assignment1: Fractures!\n");
-    printf("Please Input values below for Point one and two:\n");
+   //printf("Hello welcome to my Assignment1: Fractures!\n");
+    //printf("Please Input values below for Point one and two:\n");
 
     printf("Point #1 entered:\n");
     printf("x1 = ");
@@ -104,7 +104,7 @@ void Points_input(double *x1, double *y1, double *x2, double *y2)
 
 }
 
-void Pointsprint(double *x1, double *y1, double *x2, double *y2)
+/*void Pointsprint(double *x1, double *y1, double *x2, double *y2)
 {
     printf("Point #1 entered:\n");
     printf("x1 = %.2lf\n", *x1);
@@ -115,7 +115,7 @@ void Pointsprint(double *x1, double *y1, double *x2, double *y2)
     printf("y2 = %.2lf\n", *y2);
 
 
-}
+}*/
 
 
 
@@ -177,8 +177,8 @@ double calculateWidth()
 {
  double x1,y1,x2,y2;
 
- // Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
- Pointsprint(&x1, &y1, &x2, &y2);
+ Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
+ //Pointsprint(&x1, &y1, &x2, &y2);
 
  double with = fabs(x2 - x1);
 
