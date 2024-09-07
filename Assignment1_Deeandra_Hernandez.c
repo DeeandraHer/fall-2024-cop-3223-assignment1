@@ -16,11 +16,11 @@
 
 
 //declaring functions
-double calculateDistance();
+//double calculateDistance();
 //double calculatePerimeter();
 //double calculateArea();
-double calculateWidth();
-double calculateHeight();
+//double calculateWidth();
+//double calculateHeight();
 //double askForUserInput();
 void Points_input(double *x1, double *y1, double *x2, double *y2);
 //void Point2_input(double Px2, double Py2);
@@ -36,8 +36,9 @@ int main(int argc, char**argv)
 
  //askForUserInput();
   Points_input(&x1, &y1, &x2, &y2); //might have to delete 
-  calculateWidth();
-  calculateHeight();
+  Pointsprint(&x1, &y1, &x2, &y2);
+  //calculateWidth();
+  //calculateHeight();
   //calculatePerimeter();
   //calculateArea();
 
@@ -106,12 +107,12 @@ void Points_input(double *x1, double *y1, double *x2, double *y2)
 void Pointsprint(double *x1, double *y1, double *x2, double *y2)
 {
     printf("Point #1 entered:\n");
-    printf("x1 = %.2lf", *x1);
-    printf("y1 = %.2lf", *y1);
+    printf("x1 = %.2lf\n", *x1);
+    printf("y1 = %.2lf\n", *y1);
 
     printf("Point #2 entered:\n");
-    printf("x2 = %.2lf", *x2);
-    printf("y2 = %.2lf", *y2);
+    printf("x2 = %.2lf\n", *x2);
+    printf("y2 = %.2lf\n", *y2);
 
 
 }
@@ -120,7 +121,7 @@ void Pointsprint(double *x1, double *y1, double *x2, double *y2)
 
 
 
-double calculateDistance()
+/*double calculateDistance()
 {
   double x1,y1,x2,y2; // declaring points variables
 
@@ -170,7 +171,7 @@ double calculateDistance()
  printf("this is y2 = %.2lf\n", y2);
 
   return
-}*/
+}
 
 double calculateWidth()
 {
@@ -209,4 +210,4 @@ double calculateHeight()
  printf("The height of the city encompassed by your request is - %.2lf\n", height);
 
   return 1;
-}
+}*/
