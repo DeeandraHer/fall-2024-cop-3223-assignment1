@@ -24,20 +24,23 @@ double calculateHeight();
 //double askForUserInput();
 void Points_input(double *x1, double *y1, double *x2, double *y2);
 //void Point2_input(double Px2, double Py2);
-//void Printme();
+void Pointsprint(double *x1, double *y1, double *x2, double *y2);
 
 // main function
 int main(int argc, char**argv)
 { 
 
+  double x1,y1,x2,y2; // declaring points variables  
+ 
  //calling out functions 
 
  //askForUserInput();
- //Points_input(x1, y1, x2, y2); might have to delete 
-  //calculatePerimeter();
-  //calculateArea();
+  Points_input(&x1, &y1, &x2, &y2); //might have to delete 
   calculateWidth();
   calculateHeight();
+  //calculatePerimeter();
+  //calculateArea();
+
 
 /* this I have to delete
 I am usin this so I can see what is being stored and if the calculations make sense.
@@ -77,7 +80,10 @@ void Points_input(double *x1, double *y1, double *x2, double *y2)
     /*this will take user input and store it in each corresponding 
     user fuction usind pointers to facilitate.*/
 
-     printf("Point #1 entered:\n");
+    printf("Hello welcome to my Assignment1: Fractures!\n");
+    printf("Please Input values below for Point one and two:\n");
+
+    printf("Point #1 entered:\n");
     printf("x1 = ");
      scanf("%lf", x1); //storing variable
 
@@ -93,7 +99,20 @@ void Points_input(double *x1, double *y1, double *x2, double *y2)
      scanf("%lf", y2); //storing variable
 
 
-    
+
+
+}
+
+void Pointsprint(double *x1, double *y1, double *x2, double *y2)
+{
+    printf("Point #1 entered:\n");
+    printf("x1 = %.2lf", *x1);
+    printf("y1 = %.2lf", *y1);
+
+    printf("Point #2 entered:\n");
+    printf("x2 = %.2lf", *x2);
+    printf("y2 = %.2lf", *y2);
+
 
 }
 
@@ -105,8 +124,8 @@ double calculateDistance()
 {
   double x1,y1,x2,y2; // declaring points variables
 
-  Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
-
+  //Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
+   Pointsprint(&x1, &y1, &x2, &y2);
 //delete
  printf("this is x1 = %.2lf\n", x1);
  printf("this is y1 = %.2lf\n", y1);
@@ -155,9 +174,10 @@ double calculateDistance()
 
 double calculateWidth()
 {
- int x1,y1,x2,y2;
+ double x1,y1,x2,y2;
 
-  Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
+ // Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
+ Pointsprint(&x1, &y1, &x2, &y2);
 
  double with = fabs(x2 - x1);
 
@@ -167,7 +187,7 @@ double calculateWidth()
  printf("this is x2 = %.2lf\n", x2);
  printf("this is y2 = %.2lf\n", y2);
 
- printf("The width of the city encompassed by your request is - %.2lf", with);
+ printf("The width of the city encompassed by your request is - %.2lf\n", with);
 
   return 1;
 }
@@ -175,6 +195,8 @@ double calculateWidth()
 double calculateHeight()
 {
  int x1,y1,x2,y2;
+
+ Pointsprint(&x1, &y1, &x2, &y2);
 
  double height = fabs(y2 - y1);
 
@@ -184,7 +206,7 @@ double calculateHeight()
  printf("this is x2 = %.2lf\n", x2);
  printf("this is y2 = %.2lf\n", y2);
 
- printf("The height of the city encompassed by your request is - %.2lf", height);
+ printf("The height of the city encompassed by your request is - %.2lf\n", height);
 
   return 1;
 }
