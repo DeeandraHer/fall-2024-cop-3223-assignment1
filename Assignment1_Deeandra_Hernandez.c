@@ -155,11 +155,11 @@ double calculateDistance()
 
 double calculateWidth()
 {
- double x1,y1,x2,y2;
+ int x1,y1,x2,y2;
 
   Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
 
- double with = abs(x2 - x1);
+ double with = fabs(x2 - x1);
 
 //delete
  printf("this is x1 = %.2lf\n", x1);
@@ -174,9 +174,9 @@ double calculateWidth()
 
 double calculateHeight()
 {
- double x1,y1,x2,y2;
+ int x1,y1,x2,y2;
 
- double height = abs(y2 - y1);
+ double height = fabs(y2 - y1);
 
 //delete
  printf("this is x1 = %.2lf\n", x1);
