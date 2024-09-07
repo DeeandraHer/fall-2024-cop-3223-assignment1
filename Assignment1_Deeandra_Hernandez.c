@@ -37,7 +37,7 @@ int main(int argc, char**argv)
  //askForUserInput();
   Points_input(&x1, &y1, &x2, &y2); //might have to delete 
   Pointsprint(&x1, &y1, &x2, &y2);
-  //calculateWidth();
+  calculateWidth();
   //calculateHeight();
   //calculatePerimeter();
   //calculateArea();
@@ -171,7 +171,7 @@ void Pointsprint(double *x1, double *y1, double *x2, double *y2)
  printf("this is y2 = %.2lf\n", y2);
 
   return
-}
+}*/
 
 double calculateWidth()
 {
@@ -193,7 +193,7 @@ double calculateWidth()
   return 1;
 }
 
-double calculateHeight()
+/*double calculateHeight()
 {
  double x1,y1,x2,y2;
 
