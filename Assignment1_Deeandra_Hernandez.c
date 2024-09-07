@@ -175,7 +175,7 @@ void Pointsprint(double *x1, double *y1, double *x2, double *y2)
 
 double calculateWidth()
 {
- double *x1,*y1,*x2,*y2;
+ double x1,y1,x2,y2;
 
  // Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
  Pointsprint(&x1, &y1, &x2, &y2);
@@ -183,10 +183,10 @@ double calculateWidth()
  double with = fabs(x2 - x1);
 
 //delete
- printf("this is x1 = %.2lf\n", *x1);
+/*printf("this is x1 = %.2lf\n", *x1);
  printf("this is y1 = %.2lf\n", *y1);
  printf("this is x2 = %.2lf\n", *x2);
- printf("this is y2 = %.2lf\n", *y2);
+ printf("this is y2 = %.2lf\n", *y2);*/
 
  printf("The width of the city encompassed by your request is - %.2lf\n", with);
 
