@@ -80,7 +80,7 @@ I am usin this so I can see what is being stored and if the calculations make se
 void Points_input(double *x1, double *y1, double *x2, double *y2)
 {
     /*this will take user input and store it in each corresponding 
-    user fuction.*/
+    user fuction usind pointers to facilitate.*/
 
      printf("Point #1 entered:\n");
     printf("x1 = ");
@@ -118,13 +118,13 @@ double calculateDistance()
  printf("this is x2 = %.2lf\n", x2);
  printf("this is y2 = %.2lf\n", y2);
 
-  // calculating distance
-  //double d = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+  //calculating distance
+  double d = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 
 // delete this, this is to check the distance
-  //printf("This is the distance: %.2lf\n", d );
+  printf("This is the distance: %.2lf\n", d );
 
-  return 2.2;
+  return d;
 
 }
 
