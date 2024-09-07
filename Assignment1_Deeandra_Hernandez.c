@@ -22,7 +22,7 @@ double calculateArea();
 double calculateWidth();
 double calculateHeight();
 double askForUserInput();*/
-void Points_input(double x1, double y1, double x2, double y2);
+void Points_input(double *x1, double *y1, double *x2, double *y2);
 //void Point2_input(double Px2, double Py2);
 //void Printme();
 
@@ -31,7 +31,7 @@ int main(int argc, char**argv)
 { 
 
    //declaring variable
-  double x1,y1,x2,y2;
+  //double x1,y1,x2,y2;
 
 
  //calling out functions 
@@ -77,25 +77,25 @@ I am usin this so I can see what is being stored and if the calculations make se
 
 }*/
 
-void Points_input(double x1, double y1, double x2, double y2)
+void Points_input(double *x1, double *y1, double *x2, double *y2)
 {
     /*this will take user input and store it in each corresponding 
     user fuction.*/
 
      printf("Point #1 entered:\n");
     printf("x1 = ");
-     scanf("%lf", &x1); //storing variable
+     scanf("%lf", x1); //storing variable
 
     printf("y1 = ");
-     scanf("%lf", &y1); //storing variable
+     scanf("%lf", y1); //storing variable
 
 
     printf("Point #2 entered:\n");
     printf("x2 = ");
-     scanf("%lf", &x2); //storing variable
+     scanf("%lf", x2); //storing variable
 
     printf("y2 = ");
-     scanf("%lf", &y2); //storing variable
+     scanf("%lf", y2); //storing variable
 
 
     
@@ -110,7 +110,7 @@ double calculateDistance()
 {
   double x1,y1,x2,y2; // declaring points variables
 
-  Points_input(x1, y1, x2, y2); //calling fuction that collects user input
+  Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
 
 //delete
  printf("this is x1 = %.2lf\n", x1);
