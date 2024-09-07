@@ -119,11 +119,12 @@ double calculateDistance()
  printf("this is y2 = %.2lf\n", y2);
 
   // calculating distance
-  double d = sqrt((x2-x1) * (x2-x1) + (y2-y1) * (y2-y1));
+  //double d = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 
+// delete this, this is to check the distance
   printf("This is the distance: %.2lf\n", d );
 
-  return d;
+  return 2.2;
 
 }
 
