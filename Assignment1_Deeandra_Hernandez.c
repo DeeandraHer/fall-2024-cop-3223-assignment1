@@ -45,8 +45,8 @@ int main(int argc, char**argv)
   calculateHeight();*/
  printf("this is x1 = %.2lf\n", x1);
  printf("this is y1 = %.2lf\n", y1);
- //printf("this is x2 = %.2lf\n", x2);
- //printf("this is y2 = %.2lf\n", y2);
+ printf("this is x2 = %.2lf\n", x2);
+ printf("this is y2 = %.2lf\n", y2);
 
     
  
@@ -86,10 +86,10 @@ void Points_input(double *x1, double *y1, double *x2, double *y2)
 
     printf("Point #2 entered:\n");
     printf("x2 = ");
-     scanf("%lf\n", x2); //storing variable
+     scanf("%lf", x2); //storing variable
 
     printf("y2 = ");
-     scanf("%lf\n", y2); //storing variable
+     scanf("%lf", y2); //storing variable
 
 
     
