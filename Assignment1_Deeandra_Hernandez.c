@@ -22,7 +22,7 @@ double calculateArea();
 double calculateWidth();
 double calculateHeight();
 double askForUserInput();*/
-void Point1_input(double *x1, double *y1);
+void Point1_input(double *x1, double *y1, double *x2, double *y2);
 //void Point2_input(double Px2, double Py2);
 //void Printme();
 
@@ -36,7 +36,7 @@ int main(int argc, char**argv)
 
  //calling out functions 
  //askForUserInput();
-  Point1_input(&x1, &y1);
+  Points_input(&x1, &y1, &x2, &y2);
   //Point2_input(x2,y2);
   //calculateDistance();
   /*calculatePerimeter();
@@ -74,7 +74,7 @@ int main(int argc, char**argv)
 
 }*/
 
-void Point1_input(double *x1, double *y1)
+void Point1_input(double *x1, double *y1, double *x2, double *y2)
 {
      printf("Point #1 entered:\n");
     printf("x1 = ");
@@ -82,6 +82,15 @@ void Point1_input(double *x1, double *y1)
 
     printf("y1 = ");
      scanf("%lf", y1);
+
+
+    printf("Point #2 entered:\n");
+    printf("x2 = ");
+     scanf("%lf\n", x2); //storing variable
+
+    printf("y2 = ");
+     scanf("%lf\n", y2); //storing variable
+
 
     
 
