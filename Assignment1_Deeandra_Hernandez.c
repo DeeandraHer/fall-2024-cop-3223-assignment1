@@ -19,7 +19,7 @@
 //double calculateDistance();
 //double calculatePerimeter();
 //double calculateArea();
-//double calculateWidth();
+double calculateWidth();
 //double calculateHeight();
 //double askForUserInput();
 void Points_input(double *x1, double *y1, double *x2, double *y2);
