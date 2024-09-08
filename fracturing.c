@@ -1,13 +1,13 @@
 //********************************************************
-// Assignment1_Deeandra_Hernandez.c
+// fracturing.c
 // Author: Deeandra Hernandez
+// UCFID: 5023180
 // Date: 9/6/24
 // Class: COP 3223, Professor Parra
-// Purpose: 
-
-// Input: 
-//
-// Output:
+// Purpose: complete assingnment 1
+// Input: Points x1,y1,x2,y2 5 times
+// Output: calculation for:
+// area, diameter, perimeter, with and height 
 // //********************************************************
 
 #include <stdio.h>
@@ -22,8 +22,10 @@ double calculatePerimeter();
 double calculateArea();
 double calculateWidth();
 double calculateHeight();
-// my own helper functions
-void Points_input(double *x1, double *y1, double *x2, double *y2);
+
+// my own helper functions:
+//idea about using pointrs
+void Points_input(double *x1, double *y1, double *x2, double *y2); 
 double myheight( double hy1, double hy2);
 double mywith( double wx1, double wx2 );
 double mydistance(double dx1, double dy1, double dx2, double dy2 );
@@ -48,27 +50,12 @@ int main(int argc, char**argv)
     return 0;
 }
 
-//function to call for user input
-//idealy this function will store points 1 and 2
-/*double askForUserInput()
-{
-    printf("Point #1 entered:\n");
-    printf("x1 = ");
-     scanf("%lf", &x1); //storing variable
-
-    printf("y1 = ");
-     scanf("%lf", &y1);
-
-    printf("Point #2 entered:\n");
-    printf("x2 = ");
-     scanf("%lf", &x2); //storing variable
-
-    printf("y2 = ");
-     scanf("%lf", &y1); //storing variable
-
-
-}*/
-
+//********************************************************
+// void Points_input(double *x1, double *y1, double *x2, double *y2)
+//
+// Purpose:  to collect user input
+// Output:   no output
+//********************************************************
 void Points_input(double *x1, double *y1, double *x2, double *y2)
 {
     /*this will take user input and store it in each corresponding 
@@ -105,12 +92,6 @@ double calculateDistance()
 
   Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
   
- //delete
-  printf("this is x1 = %.2lf\n", x1);
-  printf("this is y1 = %.2lf\n", y1);
-  printf("this is x2 = %.2lf\n", x2);
-  printf("this is y2 = %.2lf\n", y2);
-
  //calling fuction that calculates distance/diameter using arguments
   double d = mydistance(x1,y1,x2,y2);
 
@@ -121,9 +102,16 @@ double calculateDistance()
 
 }
 
-double mydistance(double dx1, double dy1, double dx2, double dy2)
+
+//********************************************************
+// double mydistance(double dx1, double dy1, double dx2, double dy2)
+//
+// Purpose:  calculate distance
+// Output:   distance
+//********************************************************
+
+double mydistance(double dx1, double dy1, double dx2, double dy2) //calculates distance
 {
- //calculates distance
    double dd = sqrt((dx2 - dx1) * (dx2 - dx1) + (dy2 - dy1) * (dy2 - dy1));
 
    return dd;
@@ -178,8 +166,14 @@ double calculateArea()
 }
 
 
-//calculates with
-double mywith( double wx1, double wx2 )
+//********************************************************
+// double mywith( double wx1, double wx2 )
+//
+// Purpose:  calculate with
+// Output:   with
+//********************************************************
+
+double mywith( double wx1, double wx2 )//calculates with
 {
     double mwith = fabs(wx2 - wx1);
     return mwith;
@@ -209,6 +203,12 @@ double calculateWidth()
   return 1.0;
 }
 
+//********************************************************
+// double myheight( double wx1, double wx2 )
+//
+// Purpose:  calculate height
+// Output:   height
+//********************************************************
 
 // calculating height
 double myheight(double hy1, double hy2)
