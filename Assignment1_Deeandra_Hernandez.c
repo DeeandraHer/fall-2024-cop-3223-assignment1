@@ -190,10 +190,10 @@ double calculateWidth()
  double with = fabs(x2 - x1);
 
 //delete
-printf("this is x1 = %.2lf\n", *x1);
- printf("this is y1 = %.2lf\n", *y1);
- printf("this is x2 = %.2lf\n", *x2);
- printf("this is y2 = %.2lf\n", *y2);
+ printf("this is x1 = %.2lf\n", x1);
+ printf("this is y1 = %.2lf\n", y1);
+ printf("this is x2 = %.2lf\n", x2);
+ printf("this is y2 = %.2lf\n", y2);
 
  printf("The width of the city encompassed by your request is - %.2lf\n", with);
 
