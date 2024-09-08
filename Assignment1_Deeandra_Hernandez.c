@@ -168,7 +168,7 @@ double calculateArea()
 double mywith( double wx1, double wx2 )
 {
     double mwith = fabs(wx2 - wx1);
-    return mwith
+    return mwith;
 }
 
 double calculateWidth()
