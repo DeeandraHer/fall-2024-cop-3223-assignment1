@@ -152,6 +152,8 @@ double calculateArea()
 {
  double x1,y1,x2,y2;
 
+ Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
+
  double Area = (PI / 4) * mydistance(x1,y1,x2,y2);
 
 //delete
@@ -160,7 +162,7 @@ double calculateArea()
  printf("this is x2 = %.2lf\n", x2);
  printf("this is y2 = %.2lf\n", y2);
 
- printf("The area of the city encompassed by your request is %.2lf", Area);
+ printf("The area of the city encompassed by your request is %.2lf\n", Area);
 
   return 1.0;
 }
