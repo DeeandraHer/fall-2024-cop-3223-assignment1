@@ -35,10 +35,10 @@ int main(int argc, char**argv)
  //calling out functions 
 
  //askForUserInput();
-  Points_input(&x1, &y1, &x2, &y2); //might have to delete 
+  //Points_input(&x1, &y1, &x2, &y2); //might have to delete 
   //Pointsprint(&x1, &y1, &x2, &y2);
   calculateWidth();
-  //calculateHeight();
+  calculateHeight();
   //calculatePerimeter();
   //calculateArea();
 
@@ -193,21 +193,21 @@ double calculateWidth()
   return 1;
 }
 
-/*double calculateHeight()
+double calculateHeight()
 {
  double x1,y1,x2,y2;
 
- Pointsprint(&x1, &y1, &x2, &y2);
+ Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
 
  double height = fabs(y2 - y1);
 
 //delete
- printf("this is x1 = %.2lf\n", x1);
+ /*printf("this is x1 = %.2lf\n", x1);
  printf("this is y1 = %.2lf\n", y1);
  printf("this is x2 = %.2lf\n", x2);
- printf("this is y2 = %.2lf\n", y2);
+ printf("this is y2 = %.2lf\n", y2);*/
 
  printf("The height of the city encompassed by your request is - %.2lf\n", height);
 
   return 1;
-}*/
+}
