@@ -18,13 +18,14 @@
 //declaring functions
 double calculateDistance();
 double calculatePerimeter();
-//double calculateArea();
+double calculateArea();
 double calculateWidth();
 double calculateHeight();
 void Points_input(double *x1, double *y1, double *x2, double *y2);
 double myheight( double hy1, double hy2);
 double mywith( double wx1, double wx2 );
-//void Pointsprint(double *x1, double *y1, double *x2, double *y2);
+double mydistance(double dx1, double dy1, double dx2, double dy2 );
+
 
 // main function
 int main(int argc, char**argv)
@@ -36,22 +37,12 @@ int main(int argc, char**argv)
 
  //askForUserInput();
   //Points_input(&x1, &y1, &x2, &y2); //might have to delete 
-  //Pointsprint(&x1, &y1, &x2, &y2);
   calculateWidth();
   calculateHeight();
   calculateDistance();
   calculatePerimeter();
-  //calculateArea();
+  calculateArea();
 
-
-/* this I have to delete
-I am usin this so I can see what is being stored and if the calculations make sense.
- printf("this is x1 = %.2lf\n", x1);
- printf("this is y1 = %.2lf\n", y1);
- printf("this is x2 = %.2lf\n", x2);
- printf("this is y2 = %.2lf\n", y2);*/
-
-    
  
     return 0;
 }
@@ -105,21 +96,6 @@ void Points_input(double *x1, double *y1, double *x2, double *y2)
 
 }
 
-/*void Pointsprint(double *x1, double *y1, double *x2, double *y2)
-{
-    printf("Point #1 entered:\n");
-    printf("x1 = %.2lf\n", *x1);
-    printf("y1 = %.2lf\n", *y1);
-
-    printf("Point #2 entered:\n");
-    printf("x2 = %.2lf\n", *x2);
-    printf("y2 = %.2lf\n", *y2);
-
-
-}*/
-
-
-
 
 double calculateDistance()
 {
@@ -133,8 +109,9 @@ double calculateDistance()
   printf("this is x2 = %.2lf\n", x2);
   printf("this is y2 = %.2lf\n", y2);
 
+  double d = mydistance(x1,y1,x2,y2);
   //calculating distance
-  double d = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+  //double d = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
   //have to add -lm when compling so it links to the math library
 
   // delete this, this is to check the distance
@@ -144,13 +121,20 @@ double calculateDistance()
 
 }
 
+double mydistance(double dx1, double dy1, double dx2, double dy2)
+{
+   double dd = sqrt((dx2 - dx1) * (dx2 - dx1) + (dy2 - dy1) * (dy2 - dy1));
+
+   return dd;
+}
+
 double calculatePerimeter()
 {
  double x1,y1,x2,y2;
 
  Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
 
- double perimeter = 2 * (mywith(x1, x2) + myheight(y1, y2));
+ double perimeter = PI * mydistance(x1,y1,x2,y2);
 
  //delete
  printf("this is x1 = %.2lf\n", x1);
@@ -158,15 +142,17 @@ double calculatePerimeter()
  printf("this is x2 = %.2lf\n", x2);
  printf("this is y2 = %.2lf\n", y2);
 
- printf("he perimeter of the city encompassed by your request is %.2lf", perimeter);
+ printf("The perimeter of the city encompassed by your request is %.2lf\n", perimeter);
 
  return 1.0;
 
 }
 
-/*double calculateArea()
+double calculateArea()
 {
  double x1,y1,x2,y2;
+
+ double Area = (PI / 4) * mydistance(x1,y1,x2,y2);
 
 //delete
  printf("this is x1 = %.2lf\n", x1);
@@ -174,13 +160,15 @@ double calculatePerimeter()
  printf("this is x2 = %.2lf\n", x2);
  printf("this is y2 = %.2lf\n", y2);
 
-  return
-}*/
+ printf("The area of the city encompassed by your request is %.2lf", Area);
+
+  return 1.0;
+}
 
 double mywith( double wx1, double wx2 )
 {
-    double with = fabs(wx2 - wx1);
-
+    double mwith = fabs(wx2 - wx1);
+    return mwith
 }
 
 double calculateWidth()
@@ -190,7 +178,7 @@ double calculateWidth()
  Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
  //Pointsprint(&x1, &y1, &x2, &y2);
 
- double with = fabs(x2 - x1);
+ double with = mywith(x2, x1);
 
 //delete
  printf("this is x1 = %.2lf\n", x1);
@@ -200,7 +188,7 @@ double calculateWidth()
 
  printf("The width of the city encompassed by your request is - %.2lf\n", with);
 
-  return 1;
+  return 1.0;
 }
 
 
@@ -218,7 +206,7 @@ double calculateHeight()
 
  Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
 
- double height = fabs(y2 - y1);
+ double height = myheight(y2, y1);
 
 //delete
  printf("this is x1 = %.2lf\n", x1);
@@ -228,5 +216,5 @@ double calculateHeight()
 
  printf("The height of the city encompassed by your request is - %.2lf\n", height);
 
-  return 1;
+  return 1.0;
 }
