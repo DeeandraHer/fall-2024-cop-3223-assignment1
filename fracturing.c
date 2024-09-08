@@ -129,11 +129,6 @@ double calculatePerimeter()
  //calculating perimeter
  double perimeter = PI * mydistance(x1,y1,x2,y2);
 
- //delete
- printf("this is x1 = %.2lf\n", x1);
- printf("this is y1 = %.2lf\n", y1);
- printf("this is x2 = %.2lf\n", x2);
- printf("this is y2 = %.2lf\n", y2);
 
 //print statement
  printf("The perimeter of the city encompassed by your request is %.2lf\n", perimeter);
@@ -152,12 +147,6 @@ double calculateArea()
 
 //calculating area
  double Area = (PI / 4) * pow(mydistance(x1,y1,x2,y2), 2);
-
-//delete
- printf("this is x1 = %.2lf\n", x1);
- printf("this is y1 = %.2lf\n", y1);
- printf("this is x2 = %.2lf\n", x2);
- printf("this is y2 = %.2lf\n", y2);
 
 //print statement
  printf("The area of the city encompassed by your request is %.2lf\n", Area);
@@ -191,11 +180,6 @@ double calculateWidth()
 //calculating with
  double with = mywith(x2, x1);
 
-//delete
- printf("this is x1 = %.2lf\n", x1);
- printf("this is y1 = %.2lf\n", y1);
- printf("this is x2 = %.2lf\n", x2);
- printf("this is y2 = %.2lf\n", y2);
 
 //print statement
  printf("The width of the city encompassed by your request is - %.2lf\n", with);
@@ -226,12 +210,6 @@ double calculateHeight()
  Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
 
  double height = myheight(y2, y1);
-
-//delete
- printf("this is x1 = %.2lf\n", x1);
- printf("this is y1 = %.2lf\n", y1);
- printf("this is x2 = %.2lf\n", x2);
- printf("this is y2 = %.2lf\n", y2);
 
  printf("The height of the city encompassed by your request is - %.2lf\n", height);
 
