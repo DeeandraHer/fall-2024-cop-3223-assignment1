@@ -20,7 +20,7 @@
 //double calculatePerimeter();
 //double calculateArea();
 double calculateWidth();
-//double calculateHeight();
+double calculateHeight();
 //double askForUserInput();
 void Points_input(double *x1, double *y1, double *x2, double *y2);
 //void Point2_input(double Px2, double Py2);
