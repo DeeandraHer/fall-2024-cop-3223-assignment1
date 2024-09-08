@@ -150,7 +150,7 @@ double calculatePerimeter()
 
  Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
 
- double perimeter= 2 * (mywith(x1, x2) + myHeight(y1, y2));
+ double perimeter= 2 * (mywith(x1, x2) + myheight(y1, y2));
 
  //delete
  printf("this is x1 = %.2lf\n", x1);
