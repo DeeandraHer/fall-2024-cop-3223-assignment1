@@ -158,7 +158,7 @@ double calculatePerimeter()
  printf("this is x2 = %.2lf\n", x2);
  printf("this is y2 = %.2lf\n", y2);
 
- prinrf("he perimeter of the city encompassed by your request is %.2lf", perimeter);
+ printf("he perimeter of the city encompassed by your request is %.2lf", perimeter);
 
  return 1.0;
 
