@@ -154,7 +154,7 @@ double calculateArea()
 
  Points_input(&x1, &y1, &x2, &y2); //calling fuction that collects user input
 
- double Area = (PI / 4) * mydistance(x1,y1,x2,y2);
+ double Area = (PI / 4) * pow(mydistance(x1,y1,x2,y2), 2);
 
 //delete
  printf("this is x1 = %.2lf\n", x1);
